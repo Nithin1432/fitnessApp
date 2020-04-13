@@ -4,6 +4,7 @@ import VueRouter from 'vue-router';
 
 import router from './router';
 import EasySlider from 'vue-easy-slider';
+import Vuelidate from 'vuelidate'
 
 
 const SocialSharing = require('vue-social-sharing');
@@ -15,6 +16,8 @@ Vue.use(VueRouter);
 Vue.use(EasySlider);
 
 Vue.use(SocialSharing);
+
+Vue.use(Vuelidate);
 
 
 new Vue({
