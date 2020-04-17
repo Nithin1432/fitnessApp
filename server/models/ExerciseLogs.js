@@ -52,9 +52,11 @@ const exerciseLogs = [
     description: "Shoulder in shape ",
   },
 ];
+
 const getExerciseLogs = () => {
   return exerciseLogs;
 };
+
 const getExerciseLogDetails = (exercise) => {
   let index = exerciseLogs.findIndex((obj) => obj.id === exercise);
   if (index != -1) {
@@ -62,6 +64,7 @@ const getExerciseLogDetails = (exercise) => {
   }
   return null;
 };
+
 const addExerciseLogs = (exercise) => {
   exerciseLogs.push(exercise);
   return true;
@@ -71,6 +74,7 @@ const deleteExerciseLogs = (post) => {
   exerciseLogs = exerciseLogs.filter((obj) => obj.id === post);
   return true;
 };
+
 module.exports = {
   exerciseLogs,
   getExerciseLogs,

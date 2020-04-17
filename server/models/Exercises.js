@@ -98,7 +98,7 @@ const exercises = [
     id: 20,
     name: "Bicep curl",
     video: "https://vimeo.com/177968823",
-  }
+  },
 ];
 
 const getExercises = () => {
