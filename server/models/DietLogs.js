@@ -1,11 +1,19 @@
 const dietLogs = [
   {
-    id: 0,
-    user: 0,
-    food: "two Aaloo parathas",
+    id: 1,
+    user: 1,
+    food: "Whey Protein",
+    count: 1,
+    calories: 500,
+    description: "Protein is the necessary item",
+  },
+  {
+    id: 2,
+    user: 1,
+    food: "Soya Snacks",
     count: 2,
-    calories: 40,
-    description: "Lot of fat eaten today",
+    calories: 220,
+    description: "Carbohydrates is the second things required",
   },
 ];
 const getDietLogs = () => {
