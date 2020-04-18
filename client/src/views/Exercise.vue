@@ -135,7 +135,7 @@ export default {
       description: "This is descipriton"
     };
   },
-  
+
   props: {
     apiUrl: {
       type: String,
@@ -143,7 +143,6 @@ export default {
     }
   },
   methods: {
-
     onChange() {
       console.log(this.excerciseId);
     },

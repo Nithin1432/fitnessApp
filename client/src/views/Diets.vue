@@ -7,7 +7,7 @@
           <h3 class="ml-3">Calories Taken From Diet</h3>
         </div>
         <div class="col-md-6">
-          <h3 class="ml-3">Diet Taken</h3>
+          <h3 class="ml-3">Diet Consumed</h3>
         </div>
       </div>
 
@@ -94,6 +94,7 @@ export default {
     onChange() {
       console.log(this.excerciseId);
     },
+
     search() {
       let similar = [];
       this.exercises.find(el => {
@@ -110,21 +111,23 @@ export default {
         }
       }
     },
+
     calculateCalories() {
       this.calories = Math.floor(Math.random() * 100);
       this.submit();
     },
+
     fetchLogs() {
       axios
         .get(`${this.apiUrl}dietLogs/all`)
         .then(res => {
           this.dietLogs = res.data;
-          console.log(this.dietLogs);
         })
         .catch(err => {
           console.log(err);
         });
     },
+
     submit() {
       const diet = {
         id: this.dietLogs.length + 1,
@@ -138,7 +141,6 @@ export default {
         .post(`${this.apiUrl}dietLogs/save`, { diet: diet })
         .then(res => {
           this.exercises = res.data;
-          console.log(this.exercises);
           this.fetchLogs();
         })
         .catch(err => {
@@ -146,6 +148,7 @@ export default {
         });
     }
   },
+
   created() {
     axios
       .get(`${this.apiUrl}exercises/all`)
