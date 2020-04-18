@@ -135,6 +135,7 @@ export default {
       description: "This is descipriton"
     };
   },
+  
   props: {
     apiUrl: {
       type: String,
@@ -142,9 +143,11 @@ export default {
     }
   },
   methods: {
+
     onChange() {
       console.log(this.excerciseId);
     },
+
     search() {
       let similar = [];
       this.exercises.find(el => {
@@ -161,10 +164,12 @@ export default {
         }
       }
     },
+
     calculateCalories() {
       this.calories = Math.floor(Math.random() * 100);
       this.submit();
     },
+
     fetchLogs() {
       axios
         .get(`${this.apiUrl}exerciseLogs/all`)
@@ -176,6 +181,7 @@ export default {
           console.log(err);
         });
     },
+
     submit() {
       const exerciseLog = {
         id: this.exerciseLogs.length + 1,
@@ -198,6 +204,7 @@ export default {
         });
     }
   },
+
   created() {
     axios
       .get(`${this.apiUrl}exercises/all`)
