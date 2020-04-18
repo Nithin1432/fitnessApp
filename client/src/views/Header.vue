@@ -8,7 +8,6 @@
         <router-link class="mr-3 mt-3" v-if="isLogin!='true'" to="/login">Log in</router-link>
         <router-link class="mr-3 mt-3" v-if="isLogin!='true'" to="/signup">Sign up</router-link>
         <a class="mr-3 mt-3 text-primary" @click="logout" v-if="isLogin=='true'">Log out</a>
-        <!-- <router-link class="mr-3 mt-3" to="/signup">Sign up</router-link> -->
       </div>
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -60,6 +59,7 @@ export default {
   methods: {
     logout() {
       localStorage.clear();
+      this.isLogin = false;
       this.$router.push("/login");
     }
   },
