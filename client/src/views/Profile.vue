@@ -7,16 +7,16 @@
           <div class="card customCard">
             <img class="card-img-top" src="../assets/images/profile.jpg" alt="Card image cap" />
             <div class="card-body">
-              <h5 class="card-title">Kshiti Ghelani</h5>
+              <h5 class="card-title">John Scart</h5>
               <p class="card-text">If you can't get an introducer, then totally agreed.</p>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">E-mail : kshitighelani@gmail.com</li>
+              <li class="list-group-item">E-mail : johnscart@gmail.com</li>
               <li class="list-group-item">Phone Number : 123 456 7890</li>
             </ul>
             <div class="card-body">
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+              <a href="#" class="card-link">Personal Details</a>
+              <a href="#" class="card-link">Physical Records</a>
             </div>
           </div>
         </div>
