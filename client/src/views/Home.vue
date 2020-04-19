@@ -40,7 +40,8 @@
                   <a href="#" class="btn btn-primary">Read more..</a>
                 </div>
                 <div class="col-md-6">
-                  <social-sharing url="https://vuejs.org/" inline-template>
+                  <social-sharing url="https://vuejs.org/" title="Physical Workout" description="What 1,200 Calories Looks Like"
+                  hashtags="UziFit" quote="This is a post from UziFit platform" inline-template>
                     <a class="btn btn-primary text-white w-100">
                       <network network="facebook">
                         <i class="fa fa-fw fa-facebook"></i> Share
@@ -62,7 +63,8 @@
                   <a href="#" class="btn btn-primary">Read more..</a>
                 </div>
                 <div class="col-md-6">
-                  <social-sharing url="https://vuejs.org/" inline-template>
+                  <social-sharing url="https://vuejs.org/" title="Physical Workout" description="What 1,200 Calories Looks Like"
+                  hashtags="UziFit" quote="This is a post from UziFit platform" inline-template>
                     <a class="btn btn-primary text-white w-100">
                       <network network="facebook">
                         <i class="fa fa-fw fa-facebook"></i> Share
@@ -84,7 +86,8 @@
                   <a href="#" class="btn btn-primary">Read more..</a>
                 </div>
                 <div class="col-md-6">
-                  <social-sharing url="https://vuejs.org/" inline-template>
+                  <social-sharing url="https://vuejs.org/" title="Physical Workout" description="What 1,200 Calories Looks Like"
+                  hashtags="UziFit" quote="This is a post from UziFit platform" inline-template>
                     <a class="btn btn-primary text-white w-100">
                       <network network="facebook">
                         <i class="fa fa-fw fa-facebook"></i> Share
@@ -106,7 +109,8 @@
                   <a href="#" class="btn btn-primary">Read more..</a>
                 </div>
                 <div class="col-md-6">
-                  <social-sharing url="https://vuejs.org/" inline-template>
+                  <social-sharing url="https://vuejs.org/" title="Physical Workout" description="What 1,200 Calories Looks Like"
+                  hashtags="UziFit" quote="This is a post from UziFit platform" inline-template>
                     <a class="btn btn-primary text-white w-100">
                       <network network="facebook">
                         <i class="fa fa-fw fa-facebook"></i> Share
