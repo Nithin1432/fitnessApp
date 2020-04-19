@@ -81,7 +81,6 @@
           </div>
         </div>
       </SliderItem>
- 
     </Slider>
   </div>
 </template>
@@ -97,18 +96,21 @@ export default {
     SliderItem,
     Header
   },
+
   data() {
     return {
       list: [],
       sliderValue: 2
     };
   },
+
   methods: {
     changeIndex(index) {
       this.sliderValue = index;
       console.log(index);
     }
   },
+
   mounted() {
     setTimeout(
       () =>
@@ -141,10 +143,10 @@ export default {
 </script>
 
 <style scoped>
-.slider-btn-left{
+.slider-btn-left {
   background-color: "dodgerblu" !important;
 }
-.slider-btn-right{
+.slider-btn-right {
   background-color: "dodgerblu" !important;
 }
 
