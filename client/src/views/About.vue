@@ -8,10 +8,7 @@
             <h1 class="heading">Fitness starts with what you eat.</h1>
             <p>Take control of your goal.Track calories breakdown ingredients.and log activity with myfitnesspal</p>
             <button type="button" class="btn btn-primary btn-block">START FOR FREE</button>
-            <p>
-              Already have an account?
-              <router-link class="btn btn-link" to="/Login">Login</router-link>
-            </p>
+           
           </div>
         </div>
         <div class="col-md-6">

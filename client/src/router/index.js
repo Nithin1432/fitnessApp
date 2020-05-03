@@ -7,7 +7,6 @@ import About from '../views/About.vue';
 import Home from '../views/Home.vue';
 import Suggestion from '../views/Suggestion.vue';
 import Register from '../views/Register.vue';
-import HelloWorld from '../views/HelloWorld.vue';
 
 const routes = [
   { path: '/', component: Login },
@@ -19,7 +18,6 @@ const routes = [
   { path: '/home', component: Home },
   { path: '/suggestion', component: Suggestion },
   { path: '/signup', component: Register },
-  { path: '/hello', component: HelloWorld },
 ];
 
 

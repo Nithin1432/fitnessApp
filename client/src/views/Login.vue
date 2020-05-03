@@ -54,6 +54,7 @@
                 </p>
               </div>
               <div class="col-md-12 text-center">
+                <span v-if="submitted && error.length>1" class="text-danger" > {{error}}</span>
                 <button type="submit" class="btn btn-block mybtn btn-primary tx-tfm">Login</button>
               </div>
               <div class="col-md-12">
@@ -92,7 +93,7 @@ export default {
   props: {
     apiUrl: {
       type: String,
-      default: "http://localhost:3000/"
+      default: "http://localhost:3000/",
     }
   },
   data() {
@@ -102,7 +103,8 @@ export default {
         password: ""
       },
       submitted: false,
-      isLogin: localStorage.getItem("isLogin")
+      isLogin: localStorage.getItem("isLogin"),
+      error:"",
     };
   },
   validations: {
@@ -122,6 +124,7 @@ export default {
       this.$v.$touch();
       if (this.$v.$invalid) return;
       // sending data to login api
+      this.error="";
       axios
         .post(`${this.apiUrl}users/login`, this.user)
         .then(res => {
@@ -130,10 +133,12 @@ export default {
             localStorage.setItem("isLogin", "true");
             this.$router.push("/home");
           } else {
+            this.error="Invalid credentials"
             alert("login failed !");
           }
         })
-        .catch(err => console.log(err));
+        .catch(err => {this.error="Invalid credentials";
+        console.log(err)});
     }
   }
 };

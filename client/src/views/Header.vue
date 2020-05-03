@@ -7,7 +7,16 @@
       <div class="ml-auto mr-5 row">
         <router-link class="mr-3 mt-3" v-if="isLogin!='true'" to="/login">Log in</router-link>
         <router-link class="mr-3 mt-3" v-if="isLogin!='true'" to="/signup">Sign up</router-link>
-        <a class="mr-3 mt-3 text-primary" @click="logout" v-if="isLogin=='true'">Log out</a>
+        <ul v-if="isLogin=='true'" id="right-side">
+          <li>
+            <!-- <a href> -->
+              <img src="../assets/images/profile.jpg" id="profilepic" />
+              <span>{{user.Name}}</span>
+            <!-- </a> -->
+            <a class="mr-3 mt-3 text-primary" @click="logout" >Log out</a>
+          </li>
+        </ul>
+        
       </div>
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -50,7 +59,8 @@ export default {
   name: "Header",
   data() {
     return {
-      isLogin: localStorage.getItem("isLogin")
+      isLogin: localStorage.getItem("isLogin"),
+      user:JSON.parse(localStorage.getItem("user"))
     };
   },
   props: {
@@ -72,5 +82,36 @@ export default {
 <style scoped>
 .headerContainer {
   overflow-x: hidden;
+}
+
+#right-side {
+  display: inline;
+  float: right;
+  text-align: right;
+}
+
+#right-side li {
+  list-style-type: none;
+}
+
+#right-side li span {
+  font-style: italic;
+  font-size: 24px;
+  color: #0062cc;
+}
+
+#right-side a {
+  display: flex;
+  align-items: center;
+}
+
+#right-side a img {
+  margin-right: 10px;
+}
+
+#profilepic {
+  height:50px; 
+  width: 50px; 
+  border-radius:50px;
 }
 </style>
