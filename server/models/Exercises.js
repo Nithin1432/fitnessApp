@@ -105,11 +105,11 @@ const getExercises = () => {
   return exercises;
 };
 const getExerciseDetails = (exercise) => {
-  let index = exercises.findIndex((obj) => obj.id === exercise);
-  if (index != -1) {
-    return exercises[index];
-  }
-  return null;
+  return exercises.filter((option) => {
+    return (
+      option.name.toString().toLowerCase().indexOf(exercise.toLowerCase()) >= 0
+    );
+  });
 };
 const addExercise = (exercise) => {
   exercises.push(exercise);

@@ -52,7 +52,7 @@
         </div>
         <div class="col-md-6">
           <div class="form-group">
-            <select
+            <!-- <select
               class="form-control"
               id="exampleFormControlSelect1"
               v-model="excerciseId"
@@ -60,7 +60,18 @@
             >
               <option value="45">choose an excercise below:</option>
               <option v-for="item in exercises" :key="item.id" :value="item.id">{{item.name}}</option>
-            </select>
+            </select>-->
+            <b-field label="Find a name">
+              <b-autocomplete
+                v-model="exerciseName"
+                placeholder="e.g. Anne"
+                :keep-first="keepFirst"
+                :open-on-focus="openOnFocus"
+                :data="filteredDataObj"
+                field="name"
+                @select="option => selected = option"
+              ></b-autocomplete>
+            </b-field>
           </div>
           <div class="card w-100">
             <div class="card-body">
@@ -125,6 +136,9 @@ export default {
   data() {
     return {
       exercises: [],
+      keepFirst: false,
+      openOnFocus: false,
+
       exerciseLogs: [],
       excerciseId: 45,
       exerciseName: "",
@@ -142,11 +156,28 @@ export default {
       default: "http://localhost:3000/"
     }
   },
+  computed: {
+    filteredDataObj() {
+      this.fetchExercises();
+      return this.exercises;
+    }
+  },
   methods: {
     onChange() {
       console.log(this.excerciseId);
     },
-
+    fetchExercises() {
+      console.log("hitting");
+      axios
+        .get(`${this.apiUrl}exercises/search/${this.exerciseName}`)
+        .then(res => {
+          this.exercises = res.data;
+          return this.exercises;
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    },
     search() {
       let similar = [];
       this.exercises.find(el => {
